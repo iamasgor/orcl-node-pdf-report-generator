@@ -16,8 +16,13 @@ app.use(express.json());
 const limiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 100 });
 app.use(limiter);
 
+function index() {
+  return "asdasd";
+}
+
 // Routes
 app.use('/api/report', reportRoute);
+app.use('/', index);
 
 // HTTPS setup later via NGINX or direct with SSL certs
 app.listen(process.env.PORT, () => {

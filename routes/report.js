@@ -5,8 +5,9 @@ const ejs = require('ejs');
 const puppeteer = require('puppeteer');
 const path = require('path');
 
-router.get('/:id', async (req, res) => {
-  const id = req.params.id;
+router.get('/doa', async (req, res) => {
+  // const id = req.params.id;
+  const id = req.query.id;
   let connection;
 
   try {
@@ -50,10 +51,10 @@ router.get('/:id', async (req, res) => {
         format: 'A4',
         printBackground: true,
         margin: {
-          top: '5mm',
-          right: '10mm',
-          bottom: '15mm',
-          left: '10mm'
+          top: '20mm',
+          right: '20mm',
+          bottom: '20mm',
+          left: '20mm'
         }
       });      
 
