@@ -1,0 +1,54 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+.document-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.centered {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}

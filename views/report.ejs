@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1, h2 { color: #333; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h1>User Report by NodeJs</h1>
+  <p>নিরাপত্তা ও স্বাস্থ্যবিধি মান অনুসরণ করা।</p>
+  <p><strong>Name:</strong> <%= name %></p>
+  <p><strong>Email:</strong> <%= email %></p>
+  <p><strong>Join Date:</strong> <%= join_date %></p>
+
+  <h2>Items List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Item Code</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% items.forEach(item => { %>
+        <tr>
+          <td><%= item.ITEMS_CODE %></td>
+          <td><%= item.ITEMS_NAME %></td>
+          <td><%= item.ITEMS_QTY %></td>
+          <td><%= item.ITEMS_PRICE %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

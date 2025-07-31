@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+.centered {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+	</style>
+</head>
+<body>
+    <div class="document-container">
+        <h1 class="centered">চুক্তিপত্র</h1>
+        <p class="centered"><strong>শিশ গার্ডেন</strong></p>
+        <p class="centered"><strong>কর্মচারী চুক্তি</strong></p>
+
+        <p style="text-align: justify;">এই চুক্তিপত্র ("চুক্তি") এই _______ দিনে _______, ২০ তারিখে সম্পাদিত হয়েছে এবং এর মাধ্যমে নিম্নলিখিত পক্ষগুলির মধ্যে সম্মতি হয়েছে:</p>
+
+        <p><strong>নিয়োগকর্তা:</strong> শিশু গার্ডেন, একটি রেজিষ্ট্রেড যার অবস্থান [শিশু গার্ডেনের ঠিকানা], যাকে এই চুক্তিতে "নিয়োগকর্তা" হিসাবে উল্লেখ করা হয়েছে।</p>
+
+        <p><strong>কর্মচারী:</strong> <%= name %>, যিনি [বর্তমান ঠিকানা] এ বসবাস করেন, যাকে এই চুক্তিতে "কর্মচারী" হিসাবে উল্লেখ করা হয়েছে।</p>
+
+        <hr>
+
+        <ol style="list-style-type: bengali">
+            <li>
+                <h2>প্রস্তাবনা</h2>
+                <p>এই চুক্তি নিয়োগকর্তা এবং কর্মচারীর মধ্যে কর্মসংস্থানের শর্তাবলী নির্ধারণ করে। কর্মচারী শিশু গার্ডেনের নিয়ম, বিধি এবং নীতিমালা মেনে চলতে সম্মত হন এবং নিয়োগকর্তা কর্মচারীকে এই চুক্তিতে উল্লিখিত প্রয়োজনীয় সহায়তা ও পারিশ্রমিক প্রদান করতে সম্মত হন।</p>
+            </li>
+            <hr>
+            <li>
+                <h2>কর্মচারীর বিবরণ</h2>
+                <p>কর্মচারীর নিম্নলিখিত বিবরণগুলি সফটওয়্যার ড্রপডাউন ফিল্ডে পূরণ করা হবে:</p>
+                <ul style="list-style: disc;margin-left: 30px;">
+                    <li>পূর্ণ নাম: </li>
+                    <li>যোগাযোগের বিবরণ:</li>
+                    <li>জরুরী যোগাযোগের বিবরণ:</li>
+                    <li>বর্তমান ঠিকানা:</li>
+                    <li>স্থায়ী ঠিকানা:</li>
+                    <li>জাতীয় পরিচয়পত্র (এনআইডি):</li>
+                    <li>জন্ম সনদ:</li>
+                    <li>পাসপোর্ট নম্বর:</li>
+                    <li>নিয়োগের তারিখ: </li>
+                    <li>বেতনের বিবরণ:</li>
+                    <li>নিয়োগকৃত বিভাগ:</li>
+                    <li>কাজের বিবরণ:</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <h2>কর্মসংস্থানের শর্তাবলী</h2>
+                <ol style="list-style-type: bengali">
+                    <li><strong>কর্মসংস্থানের সময়কাল: </strong>কর্মসংস্থানের সময়কাল হবে ২ বছর, যা এই চুক্তি অনুযায়ী নবায়ন বা সমাপ্তির বিষয়।</li>
+                    <li><strong>পরীক্ষামূলক সময়কাল: </strong>প্রথম ৩ মাস পরীক্ষামূলক সময়কাল হিসাবে বিবেচিত হবে। এই সময়ে কর্মচারীর কর্মক্ষমতা মূল্যায়ন করা হবে এবং তারপর স্থায়ী কর্মসংস্থানের বিষয়ে সিদ্ধান্ত নেওয়া হবে।</li>
+                    <li><strong>উৎসব ভাতা: </strong>পরীক্ষামূলক সময়কালের ৩ মাস এবং ৬ মাস অবিচ্ছিন্ন সেবা সম্পূর্ণ করার পর (অর্থাৎ যোগদানের তারিখ থেকে ৯ মাস পরে) উৎসব ভাতা প্রযোজ্য হবে।</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
