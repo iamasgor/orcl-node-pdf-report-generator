@@ -4,11 +4,16 @@
   "description": "Try to connect oracle database",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "create-report": "node scripts/create-report.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "oracle",
-    "node"
+    "node",
+    "reports",
+    "pdf"
   ],
   "author": "Ali Asgor",
   "license": "ISC",
@@ -22,5 +27,8 @@
     "morgan": "^1.10.1",
     "oracledb": "^6.8.0",
     "puppeteer": "^24.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
   }
 }

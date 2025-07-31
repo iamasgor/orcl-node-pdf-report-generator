@@ -5,7 +5,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 require('dotenv').config();
 
-const reportRoute = require('./routes/report');
+const ReportManager = require('./services/ReportManager');
 
 const app = express();
 app.use(helmet());
@@ -16,15 +16,25 @@ app.use(express.json());
 const limiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 100 });
 app.use(limiter);
 
-function index() {
-  return "asdasd";
-}
+// Initialize report manager
+const reportManager = new ReportManager();
 
 // Routes
-app.use('/api/report', reportRoute);
-app.use('/', index);
+app.use('/api/reports', reportManager.getRouter());
+
+// Legacy route for backward compatibility
+app.use('/doa', require('./routes/doa'));
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.json({ status: 'OK', timestamp: new Date().toISOString() });
+});
 
 // HTTPS setup later via NGINX or direct with SSL certs
 app.listen(process.env.PORT, () => {
   console.log(`Server running securely on port ${process.env.PORT}`);
+  console.log('Available reports:');
+  reportManager.getAllReports().forEach(report => {
+    console.log(`  - ${report.name}: ${report.description}`);
+  });
 });
