@@ -1,6 +1,7 @@
-# Sheesh Garden Report System
+## 📝 HTML to PDF For Oracle Database 
+PDF Report Generator with Node.js, Express, Puppeteer, EJS & OracleDB
 
-A modular Node.js application for generating PDF reports using Express, Puppeteer, and EJS templates.
+This Node.js application generates dynamic PDF reports using Express, Puppeteer, and EJS templates (pure HTML and CSS), with data sourced from an Oracle database. Ideal for building printable reports or exporting data to PDF in real-time.
 
 ## 🚀 Quick Start
 
